@@ -1,2 +1,2 @@
 # calculadora
-Este projeto é uma calculadora simples em Python que oferece funcionalidades de conversão entre números binários e decimais. 
+Este projeto é uma calculadora simples em Python que oferece funcionalidades de conversão entre números binários e decimais. Ele inclui um menu interativo onde os usuários podem escolher entre converter números binários em decimais, números decimais em binários ou sair do programa. A calculadora lida com entradas inválidas, fornecendo mensagens de erro apropriadas. Ao escolher a opção "3", o programa exibe uma mensagem de despedida e encerra sua execução. É uma ferramenta prática para realizar conversões numéricas de maneira eficiente e intuitiva.
