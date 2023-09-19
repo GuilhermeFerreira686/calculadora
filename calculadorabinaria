@@ -1,0 +1,49 @@
+def binario_para_decimal(numero_binario):
+    decimal = 0
+    for digito in numero_binario[::-1]:
+        if digito == '1':
+            decimal += 2 ** (len(numero_binario) - 1)
+        elif digito != '0':
+            return "Número binário inválido"
+    return decimal
+
+def decimal_para_binario(numero_decimal):
+    if numero_decimal == 0:
+        return '0'
+    
+    numero_binario = ''
+    while numero_decimal > 0:
+        resto = numero_decimal % 2
+        numero_binario = str(resto) + numero_binario
+        numero_decimal = numero_decimal // 2
+    
+    return numero_binario
+
+while True:
+    print("Escolha uma opção:")
+    print("1. Converter de binário para decimal")
+    print("2. Converter de decimal para binário")
+    print("3. Sair")
+    
+    opcao = input("Opção: ")
+    
+    if opcao == '1':
+        numero_binario = input("Digite o número binário: ")
+        resultado = binario_para_decimal(numero_binario)
+        if isinstance(resultado, int):
+            print(f"Resultado: {resultado}")
+        else:
+            print(resultado)
+    elif opcao == '2':
+        numero_decimal = input("Digite o número decimal: ")
+        try:
+            numero_decimal = int(numero_decimal)
+            resultado = decimal_para_binario(numero_decimal)
+            print(f"Resultado: {resultado}")
+        except ValueError:
+            print("Número decimal inválido.")
+    elif opcao == '3':
+        print("Obrigado por usar a calculadora!")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
